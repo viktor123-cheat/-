@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симуляция Вируса</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Внимание!</h1>
+    <button onclick="startSimulation()">Запустить симуляцию вируса</button>
+    <div id="message"></div>
+
+    <script>
+        function startSimulation() {
+            const messageElement = document.getElementById('message');
+            messageElement.innerHTML = "Ваш компьютер заразился вирусом!";
+            
+            setTimeout(() => {
+                messageElement.innerHTML = "Вирус захватывает файлы...";
+            }, 2000);
+
+            setTimeout(() => {
+                messageElement.innerHTML = "Загрузка завершена! Ваши файлы находятся под угрозой!";
+            }, 4000);
+
+            setTimeout(() => {
+                messageElement.innerHTML = "Шутка! Это всего лишь симуляция. Не бойтесь, ваш компьютер в безопасности!";
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
